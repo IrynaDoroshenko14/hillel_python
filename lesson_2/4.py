@@ -1,10 +1,6 @@
 year = int(input("Please enter year: "))
 
-if year % 400 == 0:
-    print("YES")
-elif year % 100 == 0:
-    print("NO")
-elif year % 4 == 0:
+if year % 400 == 0 or year % 4 == 0 and year % 100 != 0:
     print("YES")
 else:
     print("NO")
