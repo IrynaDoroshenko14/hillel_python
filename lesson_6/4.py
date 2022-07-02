@@ -3,12 +3,12 @@ from datetime import datetime
 
 
 def wait(func):
-    def wrapper():
+    def wrapper(*args, **kwargs):
         for sec in range(3, 0, -1):
             print(sec)
             time.sleep(1)
 
-        func()
+        func(*args, **kwargs)
     return wrapper
 
 
